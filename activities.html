@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Options</title>
+</head>
+<body>
+
+    <h2>Select an Option</h2>
+
+    <form>
+        <label for="options">Choose an activity:</label>
+        <select id="options" name="options">
+            <option value="option1">Choose an option</option>
+            <option value="option2">Cook your favorite dish</option>
+            <option value="option3">Meditate</option>
+            <option value="option4">Art/crafts</option>
+            <option value="option5">Do skincare</option>
+        </select>
+
+        <br><br>
+
+        <input type="button" value="Submit" onclick="submitOption()">
+    </form>
+
+    <script>
+        function submitOption() {
+            var selectedOption = document.getElementById("options").value;
+            alert("You selected: " + selectedOption);
+        }
+    </script>
+
+</body>
+</html>

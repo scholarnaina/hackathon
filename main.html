@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./main.css">
+    <title>feelingstoday</title>
+    <script>
+        function redirectToPage() {
+            var selectedOption = document.getElementById("options").value;
+            var resultDiv = document.getElementById("result");
+
+            switch (selectedOption) {
+                case "option2":
+                    resultDiv.innerHTML = "10 points awarded";
+                    break;
+                case "option3":
+                    resultDiv.innerHTML = "10 points awarded";
+                    break;
+                case "option4":
+                    resultDiv.innerHTML = "10 points awarded";
+                    break;
+                case "option5":
+                    resultDiv.innerHTML = "10 points awarded";
+                    break;
+                default:
+                    resultDiv.innerHTML = "Please select an option.";
+                    // Handle the default case or do nothing
+            }
+
+            // Delay the redirect by 2 seconds (2000 milliseconds)
+            setTimeout(function () {
+                switch (selectedOption) {
+                    case "option2":
+                        window.location.href = "happy.html";
+                        break;
+                    case "option3":
+                        window.location.href = "sad.html";
+                        break;
+                    case "option4":
+                        window.location.href = "stress.html";
+                        break;
+                    case "option5":
+                        window.location.href = "overwhelmed.html";
+                        break;
+                    default:
+                        // Handle the default case or do nothing
+                }
+            }, 2000);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>How you feeling today,Choose your mood</h2>
+
+    <form onsubmit="redirectToPage(); return false;">
+        <label for="options">Choose an option:</label>
+        <select id="options" name="options">
+            <option value="option1">options</option>
+            <option value="option2">Happy?</option>
+            <option value="option3">Sad?</option>
+            <option value="option4">Stressed?</option>
+            <option value="option5">Overwhelmed?</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <!-- Add your scripts or additional content here if needed -->
+
+</body>
+
+</html>
